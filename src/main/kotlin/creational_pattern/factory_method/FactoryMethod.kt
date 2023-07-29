@@ -22,4 +22,7 @@ object CurrencyFactory {
 fun main() {
     val currency = CurrencyFactory.currencyForCountry(Country.Canada).code
     println(currency)
+
+    val currency2 = Currency("CLP")
+    println(currency2.code)
 }
