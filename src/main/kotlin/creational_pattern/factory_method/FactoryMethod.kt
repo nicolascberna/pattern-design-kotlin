@@ -1,4 +1,4 @@
-package creational_pattern
+package creational_pattern.factory_method
 
 sealed class Country {
     object Canada: Country()
@@ -9,7 +9,7 @@ sealed class Country {
 
 class Currency(val code: String)
 
-object currencyFactory {
+object CurrencyFactory {
     fun currencyForCountry(country: Country): Currency =
         when(country) {
             Country.Canada -> Currency("CAD")
@@ -20,6 +20,6 @@ object currencyFactory {
 }
 
 fun main() {
-    val currency = currencyFactory.currencyForCountry(Country.Canada).code
+    val currency = CurrencyFactory.currencyForCountry(Country.Canada).code
     println(currency)
 }

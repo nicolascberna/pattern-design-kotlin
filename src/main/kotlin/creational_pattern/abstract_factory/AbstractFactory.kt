@@ -1,4 +1,4 @@
-package creational_pattern
+package creational_pattern.abstract_factory
 
 interface DataSource
 
